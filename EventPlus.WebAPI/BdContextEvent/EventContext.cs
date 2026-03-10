@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using EventPlus.WebAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace EventPlus.WebAPI.BdContextFilme;
+namespace EventPlus.WebAPI.BdContextEvent;
 
-public partial class FilmeContext : DbContext
+public partial class EventContext : DbContext
 {
-    public FilmeContext()
+    public EventContext()
     {
     }
 
-    public FilmeContext(DbContextOptions<FilmeContext> options)
+    public EventContext(DbContextOptions<EventContext> options)
         : base(options)
     {
     }

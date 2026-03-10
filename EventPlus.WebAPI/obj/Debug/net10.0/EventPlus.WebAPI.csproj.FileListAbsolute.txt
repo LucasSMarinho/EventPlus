@@ -157,3 +157,8 @@ C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\obj\Debug\net10.0\refint\Ev
 C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\obj\Debug\net10.0\EventPlus.WebAPI.pdb
 C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\obj\Debug\net10.0\EventPlus.WebAPI.genruntimeconfig.cache
 C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\obj\Debug\net10.0\ref\EventPlus.WebAPI.dll
+C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\obj\Debug\net10.0\EventPlus.WebAPI.sourcelink.json
+C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\bin\Debug\net10.0\BCrypt.Net-Next.dll
+C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\45193262813\Desktop\Event+\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
