@@ -2,7 +2,7 @@
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 
-namespace EventPlus.WebAPI.Repositories;
+namespace EventPlus.WebAPI.Repositories; 
 
 public class InstituicaoRepository : IInstituicaoRepository
 {
@@ -27,9 +27,9 @@ public class InstituicaoRepository : IInstituicaoRepository
 
         if (instituicaoBuscada != null)
         {
-            instituicaoBuscada.NomeFantasia = instituicao.NomeFantasia;
-            instituicaoBuscada.Cnpj = instituicao.Cnpj;
-            instituicaoBuscada.Endereco = instituicao.Endereco;
+            instituicaoBuscada.NomeFantasia = String.IsNullOrWhiteSpace(instituicao.NomeFantasia) ? instituicaoBuscada.NomeFantasia : instituicao.NomeFantasia;
+            instituicaoBuscada.Cnpj = String.IsNullOrWhiteSpace(instituicao.Cnpj) ? instituicaoBuscada.Cnpj : instituicao.Cnpj;
+            instituicaoBuscada.Endereco = String.IsNullOrWhiteSpace(instituicao.Endereco) ? instituicaoBuscada.Endereco : instituicao.Endereco;
 
             _context.SaveChanges(); 
         }

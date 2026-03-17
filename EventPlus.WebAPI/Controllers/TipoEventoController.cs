@@ -10,7 +10,7 @@ namespace EventPlus.WebAPI.Controllers;
 [ApiController]
 public class TipoEventoController : ControllerBase
 {
-    private ITipoEventoRepository _tipoEventoRepository;
+    private readonly ITipoEventoRepository _tipoEventoRepository;
 
     public TipoEventoController(ITipoEventoRepository tipoEventoRepository)
     {
@@ -86,15 +86,20 @@ public class TipoEventoController : ControllerBase
     /// </summary>
     /// <param name="id">Id do tipo de evento que será atualziado</param>
     /// <param name="tipoEvento">Tipo de evneto com dados atualizado</param>
-    /// <returns>StatusCode 204 e o tipo de evento atualizado</returns>
+    /// <returns>StatusCode 200 e o tipo de evento atualizado</returns>
     [HttpPut("{id}")]
 
-    public IActionResult Atualizar(Guid id, TipoEvento tipoEvento)
+    public IActionResult Atualizar(Guid id, TipoEventoDTO tipoEvento)
     {
         try
         {
-            _tipoEventoRepository.Atualizar(id, tipoEvento);
-            return StatusCode(204, tipoEvento);
+            var tipoEventoAtualizado = new TipoEvento
+            {
+                Titulo = tipoEvento.Titulo!
+            };
+
+            _tipoEventoRepository.Atualizar(id, tipoEventoAtualizado);
+            return Ok(_tipoEventoRepository.BuscarPorId(id));
         }
         catch (Exception erro)
         {
