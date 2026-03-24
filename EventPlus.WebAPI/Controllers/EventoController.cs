@@ -1,4 +1,5 @@
-﻿using EventPlus.WebAPI.DTO;
+﻿
+using EventPlus.WebAPI.DTO;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using Microsoft.AspNetCore.Http;
@@ -127,7 +128,7 @@ namespace EventPlus.WebAPI.Controllers
         /// <param name="evento">Dados do evento atualizado</param>
         /// <returns></returns>
         [HttpPut("{id}")]
-        public IActionResult Atualizar(Guid id, EventoDTO evento)
+        public IActionResult Atualizar(Guid id, EventoDTOAtualizar evento)
         {
             try
             {

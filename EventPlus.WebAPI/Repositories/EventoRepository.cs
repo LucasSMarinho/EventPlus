@@ -28,7 +28,7 @@ public class EventoRepository : IEventoRepository
         if (eventoBuscado != null)
         {
             eventoBuscado.Nome = String.IsNullOrWhiteSpace(evento.Nome) ? eventoBuscado.Nome : evento.Nome;
-            eventoBuscado.DataEvento = evento.DataEvento;
+            eventoBuscado.DataEvento = evento.DataEvento == DateTime.MinValue ? eventoBuscado.DataEvento : evento.DataEvento;
             eventoBuscado.Descricao = String.IsNullOrWhiteSpace(evento.Descricao) ? eventoBuscado.Descricao : evento.Descricao;
             eventoBuscado.IdTipoEvento = (evento.IdTipoEvento == null) ? eventoBuscado.IdTipoEvento : evento.IdTipoEvento;
             eventoBuscado.IdInstituicao = (evento.IdInstituicao == null) ? eventoBuscado.IdInstituicao : evento.IdInstituicao;
